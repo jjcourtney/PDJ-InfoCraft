@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,56 +8,60 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
     <title>Infocraft</title>
 </head>
+
 <body>
     <header class="py-20 bg-green-800 flex justify-center">
-        <img class="w-56 m-auto" src="./assets/images/infocraft.png">
+        <img class="w-56" src="./assets/images/infocraft.png">
     </header>
-    <main>
-        <section class="flex-1" id="player-card">
+    <main class="flex flex-row">
+        <section class="static p-5" id="player-card">
             <!--- will have details of player--->
-            <div class="flex ">
+            <div class="flex">
                 <h1 class="text-6xl font-bold">Player Name</h1>
                 <p class="text-2xl font-bold">UUID</p>
             </div>
             <div class="flex">
-                <img class="w-40 object-bottom " src="./assets/images/SteveSkin.png">
-            </div>
-            <div class="text-2xl font-bold">
-                <div>
-                    <span>
-                        Date joined
-                    </span>
-                    <span>
-                        15/07/2021
-                    </span>
+                <div class="static w-52">
+                    <img class="w-40 m-12" src="./assets/images/SteveSkin.png">
                 </div>
-                <div>
-                    <span>
-                        Last online
-                    </span>
-                    <span>
-                        15/07/2021
-                    </span>
-                </div>
-                <div>
-                    <span>
-                        Number of achievements
-                    </span>
-                    <span>
-                        100
-                    </span>
+                <div class="text-2xl font-bold relative box-border w-52">
+                    <div class="flex flex-col">
+                        <span>
+                            Date joined
+                        </span>
+                        <span>
+                            15/07/2021
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            Last online
+                        </span>
+                        <span>
+                            15/07/2021
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            Number of achievements
+                        </span>
+                        <span>
+                            100
+                        </span>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="flex text-green-800 font-bold text-3xl">
-            <form action="" id="search-player-name">
+        <section class="flex flex-col text-green-800 font-bold text-3xl">
+            <form class=" " action=" " id="search-player-name">
                 <label for="input-name">
                     Player Name
                 </label>
                 <input type="text" name="" id="input-name">
-                <button class="p-8 bg-green-800 rounded-full py-4 px-8 shadow-lg text-green-100 hover:bg-green-500" type="submit">Search</button>
+                <button class="p-8 bg-green-800 rounded-full py-4 px-8 shadow-lg text-green-100 hover:bg-green-500"
+                    type="submit">Search</button>
             </form>
-            <div>
+            <div class="flex flex-col">
                 <span>
                     someName
                 </span>
@@ -71,18 +76,17 @@
     </main>
     <footer class="py-20 bg-red-900 text-center text-white">
         <div>
-            Created By PDJ. Paul Aston, Dylson Oliveira and Jon C
+            Created By PDJ. Paul Aston, Dylson Oliveira and Jon Courtney
         </div>
         <div>
             <img class="flex float-right w-48" src="./assets/images/pdj.png">
         </div>
     </footer>
 </body>
-<script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="./assets/js/script.js"></script>
 <script src="./assets/js/hypixelApi.js"></script>
 <script src="./assets/js/serverStatus.js"></script>
+
 </html>
