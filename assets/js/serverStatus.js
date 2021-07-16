@@ -1,7 +1,7 @@
 
 var address ="hypixel.net";
 
-function getHypixelStatus(){
+function getHypixelStatusAndUpdate(){
     fetch(`https://api.mcsrvstat.us/2/${address}`)
     .then(response => response.json())
     .then(data => {
@@ -11,8 +11,9 @@ function getHypixelStatus(){
             onlinePlayers : data.players.online,
             hostname : data.hostname
         }
-        console.log(object)
+        console.log(object);
     });
 };
 
-getHypixelStatus()
+getHypixelStatusAndUpdate()
+
