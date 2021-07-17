@@ -13,11 +13,3 @@ const getHypixelStatus = () => fetch(`https://api.mcsrvstat.us/2/${address}`)
     );
 
 
-function updateStatus(statusObj){
-    console.log("I am in updateStatus", statusObj)
-}
-
-getHypixelStatus().then((data) => {
-     updateStatus(data)
-    })
-
