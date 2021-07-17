@@ -1,5 +1,6 @@
 console.log("This is working!");
 
+// calls getPlayerStats take promise and calls the update function
 const updatePlayerStats = () => {
     getPlayerStats()
     .then(playerObj => {
@@ -7,7 +8,7 @@ const updatePlayerStats = () => {
     });
 };
 
-const updatePlayerElement = (playerObj) => {
+const updatePlayerElement = playerObj => {
 
     const uuidEl = $("#uuid");
     const playerNameEl = $("#player-name");
@@ -25,8 +26,8 @@ const updatePlayerElement = (playerObj) => {
 
 };
 
-
-const updateStatusElement = (serverObj) => {
+// Takes in the server object then creates / ammends / appends the data
+const updateStatusElement = serverObj => {
         
     const {isServerOnline, maxPlayers, onlinePlayers, hostname} = serverObj;
     
@@ -37,11 +38,11 @@ const updateStatusElement = (serverObj) => {
                         .text(`${hostname}`));
         
         let onlineStatusDiv = $(`<div>`)
-        .append($(`<span>`).text("Status "))
-        .append($(`<span>`).text(`${isServerOnline}`));
+        .append($(`<span>`).text("Status: "))
+        .append($(`<span>`).text(`${isServerOnline ? "Online" : "Offline"}`)); // uses ternary operator
 
         let playerOnlineDiv = $(`<div>`)
-        .append($(`<span>`).text("Players "))
+        .append($(`<span>`).text("Players: "))
         .append($(`<span>`).text(`${onlinePlayers} / ${maxPlayers}`));
 
         statusDiv.append(hostNameDiv)
@@ -50,7 +51,7 @@ const updateStatusElement = (serverObj) => {
 
 }
 
-getHypixelStatus().then((data) => {
+getHypixelStatus().then(data => {
     updateStatusElement(data)
    })
 
