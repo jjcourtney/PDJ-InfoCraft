@@ -9,6 +9,9 @@ var numAchievementsEl = $("#num-achievements");
 
 
 
+
+
+
 const updatePlayerStats = () => {
     getPlayerStats()
     .then(playerObj => {
@@ -21,4 +24,33 @@ const updatePlayerStats = () => {
     });
 };
 
+const updateStatusElement = (playerObj) => {
+        
+    const {isServerOnline, maxPlayers, onlinePlayers, hostname} = playerObj;
+    
+        const statusDiv = $("#status-div");
+
+        let hostNameDiv = $(`<div>`)
+                        .append($(`<h3>`)
+                        .text(`${hostname}`));
+        
+        let onlineStatusDiv = $(`<div>`)
+        .append($(`<span>`).text("Status "))
+        .append($(`<span>`).text(`${isServerOnline}`));
+
+        let playerOnlineDiv = $(`<div>`)
+        .append($(`<span>`).text("Players "))
+        .append($(`<span>`).text(`${onlinePlayers} / ${maxPlayers}`));
+
+        statusDiv.append(hostNameDiv)
+        .append(onlineStatusDiv)
+        .append(playerOnlineDiv)
+
+}
+
+getHypixelStatus().then((data) => {
+    updateStatusElement(data)
+   })
+
 updatePlayerStats();
+
