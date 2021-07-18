@@ -47,6 +47,6 @@ We have made a really good app in such a short time considering it was our first
 https://jjcourtney.github.io/PDJ/
 https://github.com/jjcourtney/PDJ
 
-Powerpoint Presentation Link:
+## Powerpoint Presentation Link:
 
 ![Webpage Screenshot](./assets/images/InfocraftScreenShot.png)
