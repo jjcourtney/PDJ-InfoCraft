@@ -35,15 +35,15 @@ const updateStatusElement = serverObj => {
 
         let hostNameDiv = $(`<div>`)
                         .append($(`<h3>`)
-                        .text(`${hostname}`));
+                        .text(`${hostname}`).addClass("flex flex-col font-bold text-white"));
         
         let onlineStatusDiv = $(`<div>`)
-        .append($(`<span>`).text("Status: "))
-        .append($(`<span>`).text(`${isServerOnline ? "Online" : "Offline"}`)); // uses ternary operator
+        .append($(`<span>`).text("Status: ").addClass("flex flex-col font-bold text-white"))
+        .append($(`<span>`).text(`${isServerOnline ? "Online" : "Offline"}`).addClass("flex flex-col text-white")); // uses ternary operator
 
         let playerOnlineDiv = $(`<div>`)
-        .append($(`<span>`).text("Players: "))
-        .append($(`<span>`).text(`${onlinePlayers} / ${maxPlayers}`));
+        .append($(`<span>`).text("Players: ").addClass("flex flex-col font-bold text-white"))
+        .append($(`<span>`).text(`${onlinePlayers} / ${maxPlayers}`).addClass("flex flex-col text-white"));
 
         statusDiv.append(hostNameDiv)
         .append(onlineStatusDiv)
