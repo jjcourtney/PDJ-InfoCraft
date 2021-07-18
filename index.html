@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style.css">
     <title>Infocraft</title>
 </head>
 
@@ -23,11 +24,11 @@
             </div>
             <div class="flex">
                 <div class="static w-52">
-                    <img class="w-40 m-12" src="./assets/images/SteveSkin.png">
+                    <img class="w-40 m-12 p-10" src="./assets/images/SteveSkin.png">
                 </div>
-                <div class="text-2xl font-bold relative box-border w-52">
-                    <div class="flex flex-col">
-                        <span>
+                <div class="text-2xl relative box-border p-10">
+                    <div>
+                        <span class="flex flex-col font-bold">
                             Date joined
                         </span>
                         <span id="date-joined">
@@ -35,7 +36,7 @@
                         </span>
                     </div>
                     <div>
-                        <span>
+                        <span class="flex flex-col font-bold">
                             Last online
                         </span>
                         <span id="last-online">
@@ -43,7 +44,7 @@
                         </span>
                     </div>
                     <div>
-                        <span>
+                        <span class="flex flex-col font-bold">
                             Number of achievements
                         </span>
                         <span id="num-achievements">
@@ -53,7 +54,7 @@
                 </div>
             </div>
         </section>
-        <section class="flex flex-col text-green-800 font-bold text-3xl">
+        <section class="flex flex-col text-green-800 font-bold text-3xl p-10">
             <form class=" " action=" " id="search-player-name">
                 <label for="input-name">
                     Player Name
