@@ -49,4 +49,4 @@ https://github.com/jjcourtney/PDJ
 
 ## Powerpoint Presentation Link:
 
-![Webpage Screenshot](./assets/images/InfocraftScreenShot.png)
+![Webpage Screenshot](./assets/images/InfoCraftScreenShot.png)
