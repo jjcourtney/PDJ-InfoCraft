@@ -6,14 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/style.css">
     <title>Infocraft</title>
 </head>
 
 <body class="flex flex-col justify-between h-screen">
-    <header class="flex justify-around">
-        <img class="w-56" src="./assets/images/infocraft.png">
-        <div class="flex flex-col text-black bg-green-300 rounded-2xl p-5 my-5" id="status-div"></div>
+    <header class="flex justify-end">
+
+        <h1 class="absolute top-14 left-0.5 text-black text-6xl heading-infocraft bg-green-300 p-5 shadow-xl rounded-3xl ml-5">InfoCraft</h1>
+
+        <div class="flex flex-col text-black bg-green-300 rounded-2xl p-5 my-5 mr-5" id="status-div"></div>
     </header>
     <main class="flex flex-row justify-around">
         <section class="flex flex-col items-center justify-around shadow-xl bg-green-300 rounded-3xl min-w-max">
@@ -82,7 +88,7 @@
             Created By PDJ. Paul Aston, Dylson Oliveira and Jon Courtney
         </p>
         <div>
-            <img class="w-48" src="./assets/images/pdj.png">
+            <h2 class="pdj-footer text-6xl mx-20 my-5">&lt;pdj&gt;</h2>
         </div>
     </footer>
 </body>
