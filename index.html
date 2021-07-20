@@ -15,14 +15,14 @@
 </head>
 
 <body class="flex flex-col justify-between h-screen">
-    <header class="flex justify-end">
+    <header class="flex md:justify-end justify-center flex-col md:flex-row">
 
-        <h1 class="absolute top-14 left-0.5 text-black text-6xl heading-infocraft bg-green-300 p-5 shadow-xl rounded-3xl ml-5">InfoCraft</h1>
+        <h1 class="md:absolute text-center min-w-1/2 md:top-14 md:left-0.5 md:mt-0 mt-5 text-black text-3xl md:text-5xl heading-infocraft bg-green-300 m-auto p-5 shadow-xl rounded-3xl md:ml-5">InfoCraft</h1>
 
-        <div class="flex flex-col text-black bg-green-300 rounded-2xl p-5 my-5 mr-5" id="status-div"></div>
+        <div class="flex flex-col text-black bg-green-300 rounded-2xl p-5 mx-auto my-5 md:mr-5 text-center" id="status-div"></div>
     </header>
-    <main class="flex flex-row justify-around">
-        <section class="flex flex-col items-center justify-around shadow-xl bg-green-300 rounded-3xl min-w-max">
+    <main class="flex flex-col md:flex-row justify-around">
+        <section class="flex flex-col items-center justify-around shadow-xl bg-green-300 rounded-3xl min-w-1/2 mx-8 mt-5">
             <form class="text-3xl font-bold justify-center" action=" " id="search-player-uuid">
                 <label class="flex flex-col mb-2 text-center" for="input-name ">
                     Player UUID
@@ -45,28 +45,28 @@
         </section>
         <section class="shadow-xl bg-green-300 m-8 rounded-3xl" id="player-card">
             <!--- will have details of player--->
-            <div class="flex justify-around items-baseline">
-                <h1 class="text-6xl font-bold" id="player-name">Player Name</h1>
-                <p class="text-sm" id="uuid">UUID</p>
+            <div class="flex justify-around items-baseline flex-col md:flex-row ">
+                <h1 class="text-6xl font-bold mx-auto" id="player-name">Player Name</h1>
+                <p class="text-sm text-center  mx-auto mt-5" id="uuid">UUID</p>
             </div>
-            <div class="flex">
-                <div class="static w-52">
-                    <img class="w-40 m-12 p-10" src="./assets/images/SteveSkin.png">
+            <div class="flex flex-col md:flex-row">
+                <div class="static w-52 m-auto md:m-12">
+                    <img class="w-40 m-auto" src="./assets/images/SteveSkin.png">
                 </div>
-                <div class="text-2xl relative box-border p-10">
+                <div class="text-2xl block box-border p-10 md:flex md:flex-col">
                     <div>
-                        <span class="flex flex-col font-bold">
+                        <span class="font-bold">
                             Date joined
                         </span>
-                        <span id="date-joined">
+                        <span class="text-center block md:mb-5" id="date-joined">
                             15/07/2021 <!--  -->
                         </span>
                     </div>
                     <div>
-                        <span class="flex flex-col font-bold">
+                        <span class="font-bold block">
                             Last online
                         </span>
-                        <span id="last-online">
+                        <span class="text-center block md:mb-5" id="last-online">
                             15/07/2021 <!--  -->
                         </span>
                     </div>
@@ -74,7 +74,7 @@
                         <span class="font-bold">
                             Number of achievements
                         </span>
-                        <span id="num-achievements">
+                        <span class="text-center block md:mb-5" id="num-achievements">
                             100 <!--  -->
                         </span>
                     </div>
@@ -83,7 +83,7 @@
         </section>
 
     </main>
-    <footer class="flex bg-green-300 text-center text-black text-2xl justify-end items-center">
+    <footer class="flex flex-col md:flex-row bg-green-300 text-center text-black text-2xl md:justify-end items-center">
         <p class="text-right">
             Created By PDJ. Paul Aston, Dylson Oliveira and Jon Courtney
         </p>
