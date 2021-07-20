@@ -11,9 +11,11 @@ const tsToDate = uTimeStamp => {
     return `${day}/${month}/${year}`;
 }
 
+
+
 // calls getPlayerStats take promise and calls the update function
-const updatePlayerStats = () => {
-    getPlayerStats()
+const updatePlayerStats = (uuid) => {
+    getPlayerStats(uuid)
     .then(playerObj => {
         updatePlayerElement(playerObj);
     });
@@ -65,8 +67,22 @@ const updateStatusElement = serverObj => {
 
 }
 
+// add even handler
+const searchBtnHandler = event => {
+    event.preventDefault();
+
+    const uuidInput = $("#input-uuid").val()
+    //console.log(uuidInput)
+    updatePlayerStats(uuidInput);
+
+}
+
+
 getHypixelStatus().then(data => {
     updateStatusElement(data)
    })
 
-updatePlayerStats();
+// updatePlayerStats();
+
+// add event listerner
+$("#search-player-uuid").on("submit", searchBtnHandler);
