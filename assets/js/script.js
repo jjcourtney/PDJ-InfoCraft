@@ -16,12 +16,33 @@ const renderImg = (uuid) => {
 };
 
 
+const getLocalStorage = () => {
+    
+    curLocalStorage = JSON.parse(localStorage.getItem("searchedPlayers"));
+
+    if (curLocalStorage){
+        return curLocalStorage
+    }
+    return [];
+
+}
+
+
+const updateLocalStorage = playerObj => {
+
+    let curLocalStorage = getLocalStorage();
+    curLocalStorage.push(playerObj);
+    localStorage.setItem("searchedPlayers", JSON.stringify(curLocalStorage));
+}
+
 // calls getPlayerStats take promise and calls the update function
 const updatePlayerStats = (uuid) => {
     getPlayerStats(uuid)
     .then(playerObj => {
         updatePlayerElement(playerObj);
-        if(playerObj.foundPlayer){
+        if(playerObj.foundPlayer){ 
+            // call function to write to local storage
+            updateLocalStorage(playerObj);
             renderImg(uuid);
         }
         else{
