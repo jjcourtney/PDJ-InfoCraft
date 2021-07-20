@@ -31,7 +31,7 @@ const getLocalStorage = () => {
 const updateLocalStorage = playerObj => {
 
     let curLocalStorage = getLocalStorage();
-    curLocalStorage.push(playerObj);
+    curLocalStorage.unshift(playerObj);
     localStorage.setItem("searchedPlayers", JSON.stringify(curLocalStorage));
 }
 
@@ -44,6 +44,7 @@ const updatePlayerStats = (uuid) => {
             // call function to write to local storage
             updateLocalStorage(playerObj);
             renderImg(uuid);
+            updateSearchDiv();
         }
         else{
             renderImg("9c78bf3c046f45d9b3d6f12be4da13f4");
@@ -104,6 +105,7 @@ const searchBtnHandler = event => {
     const uuidInput = $("#input-uuid").val()
     //console.log(uuidInput)
     updatePlayerStats(uuidInput);
+    $("#input-uuid").val("")
 
 }
 
@@ -113,25 +115,38 @@ const clickEventHandler = event => {
 }
 
 const updateSearchDiv = () => {
+
+    let found = [];
     
     let prevSeachedEL = $("#previous-search-div");
 
     prevSearchArr = getLocalStorage();
+    prevSeachedEL.empty();
     for (let i = 0; i < prevSearchArr.length; i++){
 
         const playerName = prevSearchArr[i].playerName;
         const uuid =  prevSearchArr[i].playerUUID;
 
+        
+      
+        if(!found.includes(uuid)){
         prevSeachedEL.append($("<button>")
         .text(playerName)
         .attr("data-uuid", uuid)
-        .addClass("shadow-xl bg-green-700 rounded-3xl text-center pb-1 text-green-200 hover:bg-green-100 hover:text-black mb-2 p-2"))
+        .addClass("shadow-xl bg-green-700 rounded-3xl text-center text-green-200 hover:bg-green-100 hover:text-black mb-2 p-2"));
 
+        found.push(uuid)
+        }
     }
 
 
 }
+const clearSearchHistory = () => {
+    localStorage.setItem("searchedPlayers", "[]");
+    $("#previous-search-div").empty();
 
+
+}
 
 getHypixelStatus().then(data => {
     updateStatusElement(data)
@@ -142,6 +157,7 @@ getHypixelStatus().then(data => {
 // add event listerner
 $("#search-player-uuid").on("submit", searchBtnHandler);
 $("#previous-search-div").on("click", clickEventHandler)
+$("#clear-button").on("click", clearSearchHistory)
 
 updateSearchDiv()
 
