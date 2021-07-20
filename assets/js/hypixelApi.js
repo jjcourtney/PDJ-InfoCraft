@@ -14,7 +14,8 @@
                 firstLogin: data.player.firstLogin,
                 lastLogin: data.player.lastLogin,
                 achievementPoints: data.player.achievementPoints,
-                numAchievements: data.player.achievementsOneTime.length
+                numAchievements: data.player.achievementsOneTime.length, 
+                foundPlayer: data.success
                 }
         }
         return {
@@ -23,7 +24,8 @@
             firstLogin: "N/A",
             lastLogin: "N/A",
             achievementPoints: "N/A",
-            numAchievements: "N/A"
+            numAchievements: "N/A",
+            foundPlayer: data.success
         }
         
 

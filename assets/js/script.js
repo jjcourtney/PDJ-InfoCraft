@@ -11,6 +11,9 @@ const tsToDate = uTimeStamp => {
     return `${day}/${month}/${year}`;
 }
 
+const renderImg = (uuid) => {
+    $("#player-skin").attr("src",`https://crafatar.com/renders/body/${uuid}`);
+};
 
 
 // calls getPlayerStats take promise and calls the update function
@@ -18,6 +21,12 @@ const updatePlayerStats = (uuid) => {
     getPlayerStats(uuid)
     .then(playerObj => {
         updatePlayerElement(playerObj);
+        if(playerObj.foundPlayer){
+            renderImg(uuid);
+        }
+        else{
+            renderImg("9c78bf3c046f45d9b3d6f12be4da13f4");
+        }
     });
 };
 
@@ -86,3 +95,7 @@ getHypixelStatus().then(data => {
 
 // add event listerner
 $("#search-player-uuid").on("submit", searchBtnHandler);
+
+
+
+
