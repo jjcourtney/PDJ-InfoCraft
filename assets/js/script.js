@@ -107,6 +107,31 @@ const searchBtnHandler = event => {
 
 }
 
+const clickEventHandler = event => {
+    updatePlayerStats($(event.target).data("uuid"));
+
+}
+
+const updateSearchDiv = () => {
+    
+    let prevSeachedEL = $("#previous-search-div");
+
+    prevSearchArr = getLocalStorage();
+    for (let i = 0; i < prevSearchArr.length; i++){
+
+        const playerName = prevSearchArr[i].playerName;
+        const uuid =  prevSearchArr[i].playerUUID;
+
+        prevSeachedEL.append($("<button>")
+        .text(playerName)
+        .attr("data-uuid", uuid)
+        .addClass("shadow-xl bg-green-700 rounded-3xl text-center pb-1 text-green-200 hover:bg-green-100 hover:text-black mb-2 p-2"))
+
+    }
+
+
+}
+
 
 getHypixelStatus().then(data => {
     updateStatusElement(data)
@@ -116,7 +141,8 @@ getHypixelStatus().then(data => {
 
 // add event listerner
 $("#search-player-uuid").on("submit", searchBtnHandler);
+$("#previous-search-div").on("click", clickEventHandler)
 
-
+updateSearchDiv()
 
 
