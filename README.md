@@ -1,23 +1,8 @@
 # INFOCRAFT
 
-Infocraft is a Minecraft data app that allows people to search their game data, such as number of achievements, when they joined and last they was online. It also shows data of the Hypixel server telling the user how many players are currently online. This was a project made with HTML, Tailwind and Javascript using two API's and making them work togethor beatifully. This was also a project for University of Birmingham Bootcamp.
+Infocraft is not an application, it’s an idea, a culture, a collective vision, shared by three diligent engineers looking to nurture the community and competitive aspects of the massive gaming behemoth that is Minecraft. 
 
-## Project 1 Overview
-
-You and your group will use everything you’ve learned over the past six units to create a real-world front-end application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfil the following requirements:
-
-## Application Requirements
-
-* Use a CSS framework other than Bootstrap.
-* Be deployed to GitHub Pages.
-* Be interactive (i.e., accept and respond to user input).
-* Use at least two [server-side APIs](https://coding-boot-camp.github.io/full-stack/apis/api-resources).
-* Does not use alerts, confirms, or prompts (use modals).
-* Use client-side storage to store persistent data.
-* Be responsive.
-* Have a polished UI.
-* Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
-* Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
+Info-craft brings users together to compare stats and achievements with one another, pushing players to compete to being the best crafter there ever was.
 
 ## The Two API's
 
@@ -32,11 +17,29 @@ Jon-
 
 ## Challenges:
 
-Had to change our original idea as had security issues with the API, originally wanted to do a text translator.
+* API’s
+* Styles of Work and Learning
+* New Technologies
+
 
 ## Successes:
 
-We had great fun working as a team.
+* Phenomenal Communication.
+* Getting a grasp at how to deal with upcoming problems, and how to work on them together
+* We created a methodical approach to solving problems step by step
+
+## Application Requirements
+
+* Use a CSS framework other than Bootstrap.
+* Be deployed to GitHub Pages.
+* Be interactive (i.e., accept and respond to user input).
+* Use at least two [server-side APIs](https://coding-boot-camp.github.io/full-stack/apis/api-resources).
+* Does not use alerts, confirms, or prompts (use modals).
+* Use client-side storage to store persistent data.
+* Be responsive.
+* Have a polished UI.
+* Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
+* Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
 ## Overall
 
