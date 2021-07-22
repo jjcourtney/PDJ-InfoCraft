@@ -17,8 +17,8 @@ https://crafatar.com/
 
 ## The Creators:
 
-Paul - https://github.com/odders17\
-Dylson - https://github.com/Dylson14\
+Paul - https://github.com/odders17 \
+Dylson - https://github.com/Dylson14 \
 Jon - https://github.com/jjcourtney
 
 ## Challenges:
