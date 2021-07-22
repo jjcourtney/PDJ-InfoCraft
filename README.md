@@ -6,13 +6,19 @@ Info-craft brings users together to compare stats and achievements with one anot
 
 ## The Two API's
 
-Hypixel- An Api to get server data
-ServerStatus- An API to get player personal data
+* Hypixel - An Api to get server data \
+https://api.hypixel.net/ \ 
+
+* ServerStatus - An API to get player personal data \
+https://api.mcsrvstat.us/ \
+
+* Crafatar - Minecraft skins \
+https://crafatar.com/
 
 ## The Creators:
 
-Paul - \
-Dylson - \
+Paul - https://github.com/odders17\
+Dylson - https://github.com/Dylson14\
 Jon - https://github.com/jjcourtney
 
 ## Challenges:
@@ -51,5 +57,7 @@ https://jjcourtney.github.io/PDJ-InfoCraft/ \
 https://github.com/jjcourtney/PDJ-InfoCraft/
 
 ## Powerpoint Presentation Link:
+
+## App Screenshot:
 
 ![Webpage Screenshot](./assets/images/InfoCraftScreenShot.png)
