@@ -11,9 +11,9 @@ ServerStatus- An API to get player personal data
 
 ## The Creators:
 
-Paul- 
-Dylson-
-Jon-
+Paul - \
+Dylson - \
+Jon - https://github.com/jjcourtney
 
 ## Challenges:
 
