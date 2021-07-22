@@ -44,8 +44,8 @@ We have made a really good app in such a short time considering it was our first
 
 ## Links to Project:
 
-https://jjcourtney.github.io/PDJ/
-https://github.com/jjcourtney/PDJ
+https://jjcourtney.github.io/PDJ-InfoCraft/ \
+https://github.com/jjcourtney/PDJ-InfoCraft/
 
 ## Powerpoint Presentation Link:
 
