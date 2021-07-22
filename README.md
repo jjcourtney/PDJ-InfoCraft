@@ -4,7 +4,7 @@ Infocraft is not an application, it’s an idea, a culture, a collective vision,
 
 Info-craft brings users together to compare stats and achievements with one another, pushing players to compete to being the best crafter there ever was.
 
-## The Two API's
+## The API's
 
 * Hypixel - An Api to get server data \
 https://api.hypixel.net/ \ 
