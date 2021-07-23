@@ -1,20 +1,20 @@
-console.log("This is working!");
 
 const tsToDate = uTimeStamp => {
-    
-    const dateObj = new Date(uTimeStamp);
+    if (typeof uTimeStamp == "number") {
+        const dateObj = new Date(uTimeStamp);
 
-    const day = dateObj.getDate();
-    const month = dateObj.getMonth() + 1;
-    const year = dateObj.getFullYear();
-    
-    return `${day}/${month}/${year}`;
+        const day = dateObj.getDate();
+        const month = dateObj.getMonth() + 1;
+        const year = dateObj.getFullYear();
+        
+        return `${day}/${month}/${year}`;
+        }
+    return "-"
 }
 
 const renderImg = (uuid) => {
     $("#player-skin").attr("src",`https://crafatar.com/renders/body/${uuid}`);
 };
-
 
 const getLocalStorage = () => {
     
@@ -26,7 +26,6 @@ const getLocalStorage = () => {
     return [];
 
 }
-
 
 const updateLocalStorage = playerObj => {
 
@@ -98,22 +97,25 @@ const updateStatusElement = serverObj => {
 
 }
 
-// add even handler
+// event handler to search players info
 const searchBtnHandler = event => {
     event.preventDefault();
 
     const uuidInput = $("#input-uuid").val()
-    //console.log(uuidInput)
+
     updatePlayerStats(uuidInput);
     $("#input-uuid").val("")
 
 }
+
 
 const clickEventHandler = event => {
     updatePlayerStats($(event.target).data("uuid"));
 
 }
 
+// Update the previously searched spans
+// Removing any duplicate names
 const updateSearchDiv = () => {
 
     let found = [];
@@ -126,9 +128,7 @@ const updateSearchDiv = () => {
 
         const playerName = prevSearchArr[i].playerName;
         const uuid =  prevSearchArr[i].playerUUID;
-
-        
-      
+             
         if(!found.includes(uuid)){
         prevSeachedEL.append($("<button>")
         .text(playerName)
@@ -141,20 +141,20 @@ const updateSearchDiv = () => {
 
 
 }
+
+// empty search div and add empty array to local storage
 const clearSearchHistory = () => {
     localStorage.setItem("searchedPlayers", "[]");
     $("#previous-search-div").empty();
 
-
 }
+
 
 getHypixelStatus().then(data => {
     updateStatusElement(data)
    })
 
-// updatePlayerStats();
-
-// add event listerner
+// event listerners for the page
 $("#search-player-uuid").on("submit", searchBtnHandler);
 $("#previous-search-div").on("click", clickEventHandler)
 $("#clear-button").on("click", clearSearchHistory)
