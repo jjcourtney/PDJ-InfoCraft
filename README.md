@@ -7,10 +7,10 @@ Info-craft brings users together to compare stats and achievements with one anot
 ## The API's
 
 * Hypixel - An Api to get server data \
-https://api.hypixel.net/ \ 
+https://api.hypixel.net/ 
 
 * ServerStatus - An API to get player personal data \
-https://api.mcsrvstat.us/ \
+https://api.mcsrvstat.us/ 
 
 * Crafatar - Minecraft skins \
 https://crafatar.com/
