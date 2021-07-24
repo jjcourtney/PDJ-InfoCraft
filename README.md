@@ -57,6 +57,7 @@ https://jjcourtney.github.io/PDJ-InfoCraft/ \
 https://github.com/jjcourtney/PDJ-InfoCraft/
 
 ## Powerpoint Presentation Link:
+[Google Docs Presentation](https://docs.google.com/presentation/d/1dgY5nxvSdIGkSuHGXzZ9Cmi2pW_-Vsk7brp6UY8IYR0/edit?usp=sharing)
 
 ## App Screenshot:
 
